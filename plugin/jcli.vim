@@ -22,7 +22,7 @@ syntax on
 
 "colo molokai
 
-silent :source ~/.vim/bundle/devops.vim/plugin/library.vim
+silent :source ~/.vim/bundle/jcli-vim/plugin/library.vim
 
 "map		<special> <silent> <F1> :call Quit()<CR>" ---Quit
 "map		<special> <silent> <F2> :call ContentReload()<CR>" ---Quit
