@@ -342,7 +342,9 @@ function! Base64decode(input)
 	if has("macunix")
 		return Base64strip(system('base64 --decode', a:input))
 	elseif has("unix")
-		return Base64strip(system('base64 --decode --wrap=0 --ignore-garbage', a:input))
+		"in some mac, get this case, just ignore some parameters here
+		return Base64strip(system('base64 --decode', a:input))
+		"return Base64strip(system('base64 --decode --wrap=0 --ignore-garbage', a:input))
 	elseif has("win32")
 		return Base64strip(system('python -m base64 -d', a:input))
 	else
